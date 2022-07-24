@@ -31,7 +31,11 @@ if __name__ == "__main__":
 
         args = parser.parse_args()
 
-        logger = log.get_logger(logger_name=__file__ + "Logger", log_file_name=__file__ + ".log", debug=args.debug)
+        logger = log.get_logger(
+            logger_name=__file__ + "Logger",
+            log_file_name=__file__ + ".log",
+            debug=args.debug,
+        )
 
         logger.debug("This is the debug logger!")
         logger.info(Color.white(f"This is {__file__}"))
